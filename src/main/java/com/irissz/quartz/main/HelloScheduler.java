@@ -31,7 +31,6 @@ public class HelloScheduler {
 				.build();
 		// 3.触发器(Trigger)
 		Trigger trigger = TriggerBuilder.newTrigger().withIdentity("trigger1", "group1")// 参数1触发器名称；参数2 触发器组的名称。
-				.startNow()// 马上启动触发器
 				.withSchedule(SimpleScheduleBuilder.simpleSchedule().repeatSecondlyForever(5))// 每5秒重复执行一次
 				.build();
 		// 4.让调度器关联任务和触发器，这样就能按照触发器定义的条件执行任务
