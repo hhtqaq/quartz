@@ -27,7 +27,7 @@ public class HelloJob implements Job{
 	}
 	@Override
 	public void execute(JobExecutionContext context) throws JobExecutionException {
-		System.out.println("给当年暗恋女神发一封匿名贺卡  暗恋你的第"+day+"天");
+		System.out.println("给当年暗恋女神发一封匿名贺卡  暗恋你的第"+day+"天"+new Date());
 		JobDataMap jobDataMap = context.getJobDetail().getJobDataMap();
 	}
 }
